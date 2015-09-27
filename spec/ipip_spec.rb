@@ -1,3 +1,5 @@
+# coding: utf-8
+
 RSpec.describe IPIP do
 
   describe '#find' do

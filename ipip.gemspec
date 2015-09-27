@@ -11,4 +11,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{ IP search based on ipip.net }
 
   gem.files         = Dir['lib/**/*']
+  gem.executables   = ['ipip']
+
+  gem.add_development_dependency 'rake'
+  gem.add_development_dependency 'rspec'
 end

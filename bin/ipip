@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+# ipip - IP location search based on ipip.net.
+#   usage: ipip [ip | domain]
+#
+
+require 'socket'
+require 'ipip'
+
+if ip = ARGV[0]
+  location = IPIP.find(ip)
+  puts "Location for #{ip}: #{location}"
+else
+  abort "usage: ipip [ip | domain]"
+end
