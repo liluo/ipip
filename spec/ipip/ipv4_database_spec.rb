@@ -19,7 +19,7 @@ RSpec.describe IPIP::IPv4Database do
       it_behaves_like 'should return location', '114.114.114.114', "114DNS\t114DNS\t\t"
 
       it_behaves_like 'should return location', '211.147.4.49', "中国\t北京\t北京\t"
-      it_behaves_like 'should return location', '202.195.161.30', "中国\t江苏\t镇江\t江苏大学"
+      it_behaves_like 'should return location', '202.195.161.30', "中国\t江苏\t镇江\t"
 
       it_behaves_like 'should return location', '192.30.252.129', "美国\t美国\t\t"
     end
