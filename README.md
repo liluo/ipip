@@ -32,8 +32,12 @@ IPIP.find('www.douban.com')     # => "中国\t北京\t北京\t"
 If you have `DATX` file(付费用户):
 
 ```
+require 'ipip'
+
 IPIPX.load_data!("/path/ipip.datx")
+
 # => Format: "国家\t省份或直辖市\t地区或城市\t学校或单位\t运营商\t纬度\t经度\t时区1\t时区2\t行政代码.."
+
 IPIPX.find('118.28.8.8')        # => "中国\t天津\t天津\t\t鹏博士\t39.125596\t117.190182\tAsia/Shanghai\tUTC+8\t120000\t86\tCN\tAP"
 
 IPIPX.find("58.82.112.15")      # => "中国\t广东\t广州\t\t电信\t23.125178\t113.280637\tAsia/Shanghai\tUTC+8\t440100\t86\tCN\tAP"
