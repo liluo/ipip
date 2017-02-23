@@ -1,5 +1,13 @@
 ## IPIP Changelog
 
+#### v0.1.2 [2017-02-23]
+
+- Remove `require 'pry'`
+
+#### v0.1.1 [2017-02-23]
+
+- Bugfix: raise `undefined method "encode" for nil:NilClass` when record not found
+
 #### v0.1.0 [2017-02-23]
 
 - Support `DATX` (付费数据格式)

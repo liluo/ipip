@@ -22,6 +22,7 @@ RSpec.describe IPIP::IPv4Database do
       it_behaves_like 'should return location', '202.195.161.30', "中国\t江苏\t镇江\t"
 
       it_behaves_like 'should return location', '192.30.252.129', "美国\t美国\t\t"
+      it_behaves_like 'should return location', '225.109.248.81', ""
     end
 
     context 'when domain' do
