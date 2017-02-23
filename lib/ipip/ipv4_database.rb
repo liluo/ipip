@@ -59,8 +59,6 @@ module IPIP
       start = unpack_V(buffer[first_ip_offset, 4])
       start_offset = start * IP_BLOCK_SIZE + FIRST_IP_NUMBER_INDEX_SIZE
 
-      data_offset = data_length = 0
-
       lo, hi = 0, (offset - start_offset) / IP_BLOCK_SIZE
 
       while lo < hi
@@ -78,11 +76,11 @@ module IPIP
       start_offset += lo * IP_BLOCK_SIZE
       return if start_offset == offset
 
-      data_offset = unpack_V(buffer[start_offset + 4, 3] + 0.chr)
+      data_pos = unpack_V(buffer[start_offset + 4, 3] + 0.chr)
       data_length = unpack_C(buffer[start_offset + 7])
 
-      data_offset = offset + data_offset - FIRST_IP_NUMBER_INDEX_SIZE - OFFSET_NUMBER_SIZE
-      data = buffer[data_offset, data_length].encode('UTF-8', 'UTF-8')
+      data_offset = offset + data_pos - FIRST_IP_NUMBER_INDEX_SIZE - OFFSET_NUMBER_SIZE
+      data = buffer[data_offset, data_length].to_s.encode('UTF-8', 'UTF-8')
     end
 
     [:C, :N, :V].each do |format|
