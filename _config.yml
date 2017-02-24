@@ -2,7 +2,7 @@ title: Ipip
 description: IP search based on IPIP.net
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-modernist
+theme: jekyll-theme-tactile
 
 gems:
   - jekyll-mentions
