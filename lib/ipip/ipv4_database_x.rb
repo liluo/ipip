@@ -57,8 +57,8 @@ module IPIPX
 
       start = unpack_V(buffer[first_ip_offset, 4])
       start_offset = start * IP_BLOCK_SIZE + FIRST_IP_NUMBER_INDEX_SIZE
-
-      lo, hi = 0, (offset - start_offset - OFFSET_NUMBER_SIZE) / IP_BLOCK_SIZE
+      end_offset = offset - FIRST_IP_NUMBER_INDEX_SIZE - OFFSET_NUMBER_SIZE
+      lo, hi = 0, (end_offset - start_offset) / IP_BLOCK_SIZE
 
       while lo < hi
         mid = (lo + hi) / 2
