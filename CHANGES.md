@@ -1,5 +1,9 @@
 ## IPIP Changelog
 
+#### v0.1.3 [2017-03-14]
+
+- Bugfix: cannot find ip > 220.*(IPIPX)
+
 #### v0.1.2 [2017-02-23]
 
 - Remove `require 'pry'`
